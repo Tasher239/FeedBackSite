@@ -1,0 +1,31 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'feedback/css/feedback.css' %}">
+    <title>{% block titile %} {% endblock %}</title>
+</head>
+<body>
+    <aside>
+        <span class="logo">FeedBackSite</span>
+        <h3>Навигация</h3>
+        <ul>
+            <li><a href="{% url 'feedback_list' %}"><i class="fas fa-house"></i> Список обращений</a></li>
+            <li><a href="{% url 'feedback_new_post' %}"><button class="btn btn-info"><i class="fas fa-plus-circle"></i> Новое обращение</button></a></li>
+        </ul>
+    </aside>
+
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>

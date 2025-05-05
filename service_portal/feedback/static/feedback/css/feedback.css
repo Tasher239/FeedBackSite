@@ -1,0 +1,101 @@
+body {
+    background: #2c2c2c;
+}
+
+aside {
+    position: fixed;
+    float: left;
+    bottom: 0;
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside .logo {
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+    right: 15px;
+}
+
+aside h3 {
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+aside ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0;
+}
+
+aside ul li{
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: transform 0.6s ease;
+}
+
+aside ul li:hover, aside ul a:hover{
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main {
+  margin-left: 20%;
+  padding: 1rem;
+}
+
+main .features {
+  max-width: 800px;
+  margin: 30px auto;
+  text-align: left;
+  color: #fff;
+}
+
+main .features h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 50px;
+  position: static;
+}
+
+main .features p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.alert-warning {
+  float: none;
+  clear: none;
+  width: 500px;
+  margin: 20px auto;
+  text-align: left;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+
+form {
+    margin-left: 20%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+
+main .features a.btn {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+

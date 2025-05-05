@@ -1,0 +1,19 @@
+{% extends 'feedback/layout.html' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ feedback.get_request_type_display }}: {{ feedback.theme }}</h1>
+        <p>{{ feedback.full_text }}</p>
+        {% if feedback.file %}
+            <p>
+                <a href="{{ feedback.file.url }}" download class="btn btn-primary">Скачать вложение</a>
+            </p>
+        {% else %}
+            <p>
+                Файлы не приложены
+            </p>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'feedback/layout.html' %}
+
+{% block title %}Новое обращение{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Форма обращения</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.request_type }}<br>
+            {{ form.theme }}<br>
+            {{ form.full_text }}<br>
+            {{ form.file }}<br>
+            <span>{{ error }}</span>
+
+            <button class="btn btn-success" type="submit">Добавить обращение</button>
+        </form>
+    </div>
+{% endblock %}

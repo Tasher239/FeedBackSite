@@ -1,0 +1,23 @@
+{% extends 'feedback/layout.html' %}
+
+{% block title %}Список обращений{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Список поступивших обращений</h1>
+        {% if feedbacks %}
+            {% for fb in feedbacks %}
+                <div class="alert alert-warning">
+                    <h4>&bull;  {{ fb.get_request_type_display }}</h4>
+                    <h3>«{{ fb.theme }}»</h3>
+                    <p>{{ fb.full_text|truncatechars:90 }}</p>
+                    <a href="{% url 'feedback_detail' fb.id %}" class="btn btn-warning">Подробнее</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-danger">
+                <h3>Нет обращений</h3>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
